@@ -5,21 +5,21 @@
 class Stamp < Formula
   desc "A beautiful CLI for managing Architecture Decision Records (ADRs)"
   homepage "https://github.com/stef16robbe/stamp"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.0/stamp_darwin_amd64"
-      sha256 "6f51d4662d3ac13cc19ab7f1ed42f7a3c1086fd251d49e4d8dcf1c4113bf40a9"
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_darwin_amd64"
+      sha256 "0574838430b910c0511b9b3417b25c74edbe42cafec675543c5d47a9ce723efe"
 
       def install
         bin.install Dir.glob("stamp*").first => "stamp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.0/stamp_darwin_arm64"
-      sha256 "2251e216c4ef5980de5a7eaeed80ee3ee7bfb9d94c0b514687e183923cc489fa"
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_darwin_arm64"
+      sha256 "adb4b7f2e03e12b6a0f44049a7e9358150c4bdc2433117d835fa2e8ee3c90b81"
 
       def install
         bin.install Dir.glob("stamp*").first => "stamp"
@@ -29,15 +29,15 @@ class Stamp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.0/stamp_linux_amd64"
-      sha256 "255ccfa2b4d305486bbf1bb2f95f353fb7ed32619a0f734b0d194e54e8ceb6cd"
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_linux_amd64"
+      sha256 "00aeac511db1477e1b219ad2b824a645b6fa4173decd8eae75fb5479e941fb2f"
       def install
         bin.install Dir.glob("stamp*").first => "stamp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.0/stamp_linux_arm64"
-      sha256 "0898021ed3a575522b77bb1890e499420b08b5fdf481c01f4462cd39d6783cad"
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_linux_arm64"
+      sha256 "f06c0922e6f57f01578560c6673ab3e59f5336dff64c70df49219a317a5fc7b2"
       def install
         bin.install Dir.glob("stamp*").first => "stamp"
       end
