@@ -5,23 +5,23 @@
 class Stamp < Formula
   desc "A beautiful CLI for managing Architecture Decision Records (ADRs)"
   homepage "https://github.com/stef16robbe/stamp"
-  version "0.4.1"
+  version "0.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_darwin_amd64"
-      sha256 "0574838430b910c0511b9b3417b25c74edbe42cafec675543c5d47a9ce723efe"
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.2/stamp_darwin_amd64"
+      sha256 "1a29f74a993df07243241258b7c37b3af1a012a4419d9289d231e7fa798802f0"
 
-      def install
+      define_method(:install) do
         bin.install Dir.glob("stamp*").first => "stamp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_darwin_arm64"
-      sha256 "adb4b7f2e03e12b6a0f44049a7e9358150c4bdc2433117d835fa2e8ee3c90b81"
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.2/stamp_darwin_arm64"
+      sha256 "eb3a7b2917ce21cf7eb5bac8bcb103005a6d93f0b0808827ef86f8c2f317b2d2"
 
-      def install
+      define_method(:install) do
         bin.install Dir.glob("stamp*").first => "stamp"
       end
     end
@@ -29,16 +29,16 @@ class Stamp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_linux_amd64"
-      sha256 "00aeac511db1477e1b219ad2b824a645b6fa4173decd8eae75fb5479e941fb2f"
-      def install
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.2/stamp_linux_amd64"
+      sha256 "ac028634bd609709b782a0e35c9c72c1e91ec9771ddfc6af76e2963b494f4716"
+      define_method(:install) do
         bin.install Dir.glob("stamp*").first => "stamp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.1/stamp_linux_arm64"
-      sha256 "f06c0922e6f57f01578560c6673ab3e59f5336dff64c70df49219a317a5fc7b2"
-      def install
+      url "https://github.com/stef16robbe/stamp/releases/download/v0.4.2/stamp_linux_arm64"
+      sha256 "e93f63ef408e2fdcd0bbf697fb963b80aace572b26c11ea286579c7776535f20"
+      define_method(:install) do
         bin.install Dir.glob("stamp*").first => "stamp"
       end
     end
